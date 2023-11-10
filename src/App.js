@@ -16,7 +16,7 @@ constructor() {
 componentDidMount() {
   fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => response.json())
-  .then( users=> this.setState({monsters: users}))
+  .then( users => this.setState({monsters: users}))
 }
 
 handleChange = (e) => {
@@ -34,6 +34,9 @@ handleChange = (e) => {
         handleChange={this.handleChange}
         />
         <CardList monsters = {filteredMonsters} />
+        <footer>
+          <p>&#169; copyright 2023</p>
+        </footer>
       </div>
     );
   }
